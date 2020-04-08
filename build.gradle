@@ -35,7 +35,9 @@ repositories {
 
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
-    testCompile('org.springframework.boot:spring-boot-starter-test') //자동완성 가능 ctrl+ space
+    compile('org.projectlombok:lombok')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+    //자동완성 가능 ctrl+ space
     //단 특정 버전을 명시하면 안된다. 버전을 명시하지 않아야만 맨위에 작성한 org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion} 의 버전을 따라간다.
     // 이렇게 관리할 경우 각 라이브러리들의 버전관리가 한곳에 집중되고 버전 충돌 문제도 해결된다.
 }
