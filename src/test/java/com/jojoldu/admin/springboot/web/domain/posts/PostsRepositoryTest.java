@@ -34,7 +34,7 @@ public class PostsRepositoryTest {
 
         postsRepository.save(Posts.builder()    //테이블 posts에 insert/update 쿼리를 실행한다. id값이 있다면 update가 없다면 insert 쿼리가 실행된다.
             .title(title)
-            .contents(contents)
+            .content(contents)
             .author("fuckme")
             .build());
 
@@ -44,7 +44,7 @@ public class PostsRepositoryTest {
         //then
         Posts posts = postsList.get(0);
         assertThat(posts.getTitle()).isEqualTo(title);
-        assertThat(posts.getContents()).isEqualTo(contents);
+        assertThat(posts.getContent()).isEqualTo(contents);
     }
 
 }
