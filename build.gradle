@@ -38,6 +38,7 @@ dependencies {
     compile('org.projectlombok:lombok')
     compile('org.springframework.boot:spring-boot-starter-data-jpa')//스프링 부트용 spring data jpa 추상화 라이브러리, 스프링 부트 버전에 맞춰 자동으로 jpa 관련 라이브러리들의 버전 관리해준다.
     compile('com.h2database:h2')//인메모리 관계형 데이터베이스. 별도 설치 필요 없이 프로젝트 의존성만으로 관리한다. 메모리가 실행되기 때문에 애플리케이션을 재시작할 때마다 초기화 된다는 점을 이용하여 테스트 용도로 많이 사용 한다.
+    compile('org.springframework.boot:spring-boot-starter-mustache')    //스프링 부트에서 공식 지원하는 템플릿 엔진
     testCompile('org.springframework.boot:spring-boot-starter-test')
     //자동완성 가능 ctrl+ space
     //단 특정 버전을 명시하면 안된다. 버전을 명시하지 않아야만 맨위에 작성한 org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion} 의 버전을 따라간다.
