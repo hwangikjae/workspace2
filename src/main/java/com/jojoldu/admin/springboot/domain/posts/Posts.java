@@ -36,4 +36,9 @@ public class Posts {
 
     //왠만하면 Entity의 PK는 Long 타입의 Auto_increment를 추천한다.(mysql 기준으로 이렇게 하면 bigint)
     //주민번호와 같이 비지니스상 유니크한 키나 여러키를 조합한 복합키로 PK를 잡을 경우 난감한 상황이 발생한다.
+
+    public void update(String title, String content){
+        this.title = title;
+        this.content = content;
+    }
 }
