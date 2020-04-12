@@ -42,8 +42,13 @@ var main = {
         var id = $('#id').val();
 
         $.ajax({
-            type: 'PUT',
-            url: '/api/v1/posts/'+id,
+            type: 'PUT',    //
+            //rest 규약 CRUD는 다음과 같이 http method에 매핑된다.
+            //생성(create : POST)
+            //읽기(read : GET)
+            //수정(update : PUT)
+            //삭제(delete : DELETE)
+            url: '/api/v1/posts/'+id,   //어느 게시글을 수정할지 url path로 구분하기 위해 path에 id를 추가한다.
             dataType: 'json',
             contentType:'application/json; charset=utf-8',
             data: JSON.stringify(data)
